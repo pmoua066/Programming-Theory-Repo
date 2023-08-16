@@ -275,6 +275,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullness: 0
+--- !u!65 &185500873
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185500871}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 15, y: 45, z: 50}
+  m_Center: {x: 0, y: 15, z: 0}
 --- !u!1 &193896460 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8389995580259329153, guid: 08c169ad23d6c7b469bd82bd300b9a44, type: 3}
@@ -525,7 +538,7 @@ PrefabInstance:
       objectReference: {fileID: 790617924}
     - target: {fileID: 8736306309072059435, guid: d9d95800fb2d09142a2e59d48c9b2ad6, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8736306309072059435, guid: d9d95800fb2d09142a2e59d48c9b2ad6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -932,7 +945,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1001 &787848802
 PrefabInstance:
@@ -1051,7 +1064,10 @@ MonoBehaviour:
   - {fileID: 1097853166}
   - {fileID: 193896460}
   - {fileID: 1767593782}
-  fruitIndex: 0
+  fruitSpawn:
+  - {fileID: 6918827046624516116, guid: 5836e2119bb218f4ea84109526c33a3b, type: 3}
+  - {fileID: 8389995580259329153, guid: 08c169ad23d6c7b469bd82bd300b9a44, type: 3}
+  - {fileID: 2958296487967216826, guid: 6c05cc46c572cf54f8d21b0135b42674, type: 3}
   cowFullness: {fileID: 41059655}
   hourseFullness: {fileID: 439986934}
   stagFullness: {fileID: 671653024}
@@ -1191,6 +1207,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullness: 0
+--- !u!65 &1230789747
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230789745}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 24.34, y: 31.78, z: 48}
+  m_Center: {x: 0, y: 15, z: 0}
 --- !u!1 &1743661822 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 142896, guid: e2b54f18a442ae84cb37b05e649edfc0, type: 3}
@@ -1209,6 +1238,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullness: 0
+--- !u!65 &1743661824
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1743661822}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.45889947, z: 0.39996374}
+  m_Center: {x: 0, y: 0.22944973, z: 0.050018452}
 --- !u!1 &1767593782 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2958296487967216826, guid: 6c05cc46c572cf54f8d21b0135b42674, type: 3}
@@ -1435,7 +1477,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 4578487161453451073, guid: 6c05cc46c572cf54f8d21b0135b42674, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: -3264225160491764130, guid: 6c05cc46c572cf54f8d21b0135b42674, type: 3}
+    - {fileID: -7911568111512767068, guid: 6c05cc46c572cf54f8d21b0135b42674, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6c05cc46c572cf54f8d21b0135b42674, type: 3}
 --- !u!1001 &6918827047797897888
 PrefabInstance:
@@ -1496,7 +1544,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8881473663926889340, guid: 5836e2119bb218f4ea84109526c33a3b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2274383283711362351, guid: 5836e2119bb218f4ea84109526c33a3b, type: 3}
+    - {fileID: 7393677762566352249, guid: 5836e2119bb218f4ea84109526c33a3b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5836e2119bb218f4ea84109526c33a3b, type: 3}
 --- !u!1001 &8389995579873171684
 PrefabInstance:
@@ -1553,5 +1607,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Food_Carrot
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9014844432750338668, guid: 08c169ad23d6c7b469bd82bd300b9a44, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 831943644899431530, guid: 08c169ad23d6c7b469bd82bd300b9a44, type: 3}
+    - {fileID: -8494804564803872622, guid: 08c169ad23d6c7b469bd82bd300b9a44, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 08c169ad23d6c7b469bd82bd300b9a44, type: 3}

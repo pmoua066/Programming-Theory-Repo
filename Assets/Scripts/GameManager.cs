@@ -10,41 +10,29 @@ public class GameManager : MonoBehaviour
     public Vector3 currentPos;
     private int indexHolder;
     public GameObject[] fruitArray;
-    [SerializeField] private int fruitIndex;
+    private int fruitIndex;
+    public GameObject[] fruitSpawn;
     private bool foodCooldown;
 
     [SerializeField] private TextMeshProUGUI cowFullness;
     [SerializeField] private TextMeshProUGUI hourseFullness;
     [SerializeField] private TextMeshProUGUI stagFullness;
 
-    // Start is called before the first frame update
     void Start()
     {
         foodCooldown = false;
-        indexHolder = 1;
-        fruitIndex = 1;
-
-        currentPos = foodPoints[indexHolder];
-
-
-
+        indexHolder = 1; //sets the position to center
+        fruitIndex = 1; //sets the fruit to carrot
+        currentPos = foodPoints[indexHolder]; //sets the initial pos
     }
 
-    // Update is called once per frame
     void Update()
     {
         controlMovement();
 
-        fruitArray[0].transform.position = currentPos;
-        fruitArray[1].transform.position = currentPos;
-        fruitArray[2].transform.position = currentPos;
-
         fruitSelector();
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-
-        }
+        SpawnFruit();
     }
     void displayFullness()
     {
@@ -52,6 +40,10 @@ public class GameManager : MonoBehaviour
     }
     void controlMovement()
     {
+        fruitArray[0].transform.position = currentPos;
+        fruitArray[1].transform.position = currentPos;
+        fruitArray[2].transform.position = currentPos;
+
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if (indexHolder > 0)
@@ -103,5 +95,21 @@ public class GameManager : MonoBehaviour
                 fruitArray[1].SetActive(true);
             }
         }
+    }
+
+    void SpawnFruit()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && !foodCooldown)
+        {
+            Instantiate(fruitSpawn[fruitIndex], currentPos, fruitSpawn[fruitIndex].transform.rotation);
+            StartCoroutine(foodReset());
+        }
+    }
+
+    IEnumerator foodReset()
+    {
+        foodCooldown = true;
+        yield return new WaitForSeconds(1);
+        foodCooldown = false;
     }
 }
