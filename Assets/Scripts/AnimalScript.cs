@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class AnimalScript : MonoBehaviour
 {
-    public float hunger;
+    public float fullness;
     
     void Start()
     {
-        hunger = 100;
+        fullness = 100;
         InvokeRepeating("GetHungry", 1, 1);
     }
 
@@ -20,6 +20,6 @@ public class AnimalScript : MonoBehaviour
 
     public virtual void GetHungry()
     {
-        hunger -= 1;
+        fullness -= 1;
     }    
 }

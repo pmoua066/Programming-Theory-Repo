@@ -6,7 +6,7 @@ public class HorseScipt : AnimalScript
 {
     public override void GetHungry()
     {
-        hunger -= 2;
+        fullness -= 2;
     }
 }
 

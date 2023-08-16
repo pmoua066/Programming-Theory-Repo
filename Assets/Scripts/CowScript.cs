@@ -6,6 +6,6 @@ public class CowScript : AnimalScript
 {
     public override void GetHungry()
     {
-        hunger -= 3;
+        fullness -= 3;
     }
 }
