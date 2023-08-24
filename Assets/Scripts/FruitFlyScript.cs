@@ -23,7 +23,6 @@ public class FruitFlyScript : MonoBehaviour
 
     IEnumerator debugDestroy()
     {
-        Debug.Log("destroy started");
         yield return new WaitForSeconds(3);
         Destroy(gameObject);
     }

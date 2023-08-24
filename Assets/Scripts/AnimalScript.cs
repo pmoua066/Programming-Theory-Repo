@@ -21,5 +21,17 @@ public class AnimalScript : MonoBehaviour
     public virtual void GetHungry()
     {
         fullness -= 1;
-    }    
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Food") && fullness < 90)
+        {
+            fullness += 10;
+        }
+        else
+        {
+            fullness = 100;
+        }
+    }
 }
