@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     private int fruitIndex;
     public GameObject[] fruitSpawn;
     private bool foodCooldown;
+    private CowScript cowScript;
+    private HorseScipt horseScript;
+    private StagScript stagScript;
+    //public bool isGameActive { get; private set; }
 
     [SerializeField] private TextMeshProUGUI cowFullness;
     [SerializeField] private TextMeshProUGUI hourseFullness;
@@ -20,10 +24,15 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        //isGameActive = true;
         foodCooldown = false;
         indexHolder = 1; //sets the position to center
         fruitIndex = 1; //sets the fruit to carrot
         currentPos = foodPoints[indexHolder]; //sets the initial pos
+
+        cowScript = GameObject.Find("Animal_Cow").GetComponent<CowScript>();
+        horseScript = GameObject.Find("Animal_Horse").GetComponent<HorseScipt>();
+        stagScript = GameObject.Find("Animal_Stag").GetComponent<StagScript>();
     }
 
     void Update()
@@ -33,10 +42,14 @@ public class GameManager : MonoBehaviour
         fruitSelector();
 
         SpawnFruit();
+
+        displayFullness();
     }
     void displayFullness()
     {
-
+        cowFullness.text = "" + cowScript.fullness;
+        hourseFullness.text = "" + horseScript.fullness;
+        stagFullness.text = "" + stagScript.fullness;
     }
     void controlMovement()
     {

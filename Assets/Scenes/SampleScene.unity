@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed26a6e385419d4f945b2a48479696f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullness: 0
+  m_fullness: 0
 --- !u!65 &185500873
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1068,6 +1068,10 @@ MonoBehaviour:
   - {fileID: 6918827046624516116, guid: 5836e2119bb218f4ea84109526c33a3b, type: 3}
   - {fileID: 8389995580259329153, guid: 08c169ad23d6c7b469bd82bd300b9a44, type: 3}
   - {fileID: 2958296487967216826, guid: 6c05cc46c572cf54f8d21b0135b42674, type: 3}
+  animals:
+  - {fileID: 41059653}
+  - {fileID: 439986932}
+  - {fileID: 671653022}
   cowFullness: {fileID: 41059655}
   hourseFullness: {fileID: 439986934}
   stagFullness: {fileID: 671653024}
@@ -1206,7 +1210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8344cce7dd951a845b99c548d54c645e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullness: 0
+  m_fullness: 0
 --- !u!65 &1230789747
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1237,7 +1241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cb25f5f893f32343abc799899befa44, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fullness: 0
+  m_fullness: 0
 --- !u!65 &1743661824
 BoxCollider:
   m_ObjectHideFlags: 0

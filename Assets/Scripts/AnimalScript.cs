@@ -4,11 +4,29 @@ using UnityEngine;
 
 public class AnimalScript : MonoBehaviour
 {
-    public float fullness;
-    
+    private GameManager gameManager;
+    [SerializeField] private int m_fullness;
+    public int fullness 
+    { 
+        get { return m_fullness; } 
+        set
+        {
+            if ( value > 100.0f)
+            {
+                Debug.Log("The animal is full");
+                value = 100;
+            }
+            else
+            {
+                m_fullness = value;
+            }
+        }
+    }
+
     void Start()
     {
-        fullness = 100;
+        gameManager = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        m_fullness = 100;
         InvokeRepeating("GetHungry", 1, 1);
     }
 
@@ -25,13 +43,9 @@ public class AnimalScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Food") && fullness < 90)
+        if (other.CompareTag("Food"))
         {
             fullness += 10;
-        }
-        else
-        {
-            fullness = 100;
         }
     }
 }
