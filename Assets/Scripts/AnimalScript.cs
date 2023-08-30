@@ -9,7 +9,7 @@ public class AnimalScript : MonoBehaviour
     public int fullness 
     { 
         get { return m_fullness; } 
-        set
+        set //ENCAPSULATION
         {
             if ( value > 100.0f)
             {

@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
         stagScript = GameObject.Find("Animal_Stag").GetComponent<StagScript>();
     }
 
-    void Update()
+    void Update() //ABSTRACTION
     {
         controlMovement();
 
